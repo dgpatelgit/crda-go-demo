@@ -13,7 +13,7 @@ require (
 	github.com/oleiade/reflections v1.0.1 // indirect
 	github.com/ory/fosite v0.0.0-20200916092647-8daab21f97c5
 	github.com/pborman/uuid v1.2.1 // indirect
-	github.com/pterodactyl/wings v1.1.2
+	github.com/pterodactyl/wings v1.2.3
 	github.com/slackhq/nebula v1.1.0
 	k8s.io/client-go v11.0.0+incompatible // indirect
 	k8s.io/helm v2.17.0+incompatible // indirect
