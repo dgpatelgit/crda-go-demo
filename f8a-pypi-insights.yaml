@@ -14,7 +14,7 @@ services:
 #     latent_factor: 40
 #     maximum_length_of_manifest: 500
 #     minimum_length_of_manifest: 20
-#     model_version: 2021-01-08
+#     model_version: 2021-02-02
 #     precision_at_30: 1.811184061580258e-05
 #     precision_at_50: 1.2074560410535055e-05
 #     recall_at_30: 0.708148148148148
@@ -30,7 +30,7 @@ services:
       REPLICAS: 1
       DOCKER_REGISTRY: quay.io
       DOCKER_IMAGE: openshiftio/rhel-fabric8-analytics-f8a-pypi-insights
-      MODEL_VERSION: "2021-01-04"
+      MODEL_VERSION: "2021-02-02"
   - name: production
 # ** THIS COMMENT BLOCK IS GENERATED AND REPLACED BY AN AUTOMATED SCRIPT; DO NOT UPDATE IT MANUALLY **
 # 
