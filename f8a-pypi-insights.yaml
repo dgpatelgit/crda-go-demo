@@ -1,27 +1,9 @@
 services:
-- &f8a-pypi-insights_def
-  hash: ec75203eeebbb5bcd1f086d7869545ef02bfab42
+- hash: ec75203eeebbb5bcd1f086d7869545ef02bfab42
   hash_length: 7
   name: f8a-pypi-insights
   environments:
   - name: staging
-# ** THIS COMMENT BLOCK IS GENERATED AND REPLACED BY AN AUTOMATED SCRIPT; DO NOT UPDATE IT MANUALLY **
-# 
-# - Hyper parameters :: 
-#     deployment: staging
-#     f1_score_at_30: 4.6222653164811095e-05
-#     f1_score_at_50: 3.414870216677577e-05
-#     latent_factor: 40
-#     maximum_length_of_manifest: 500
-#     minimum_length_of_manifest: 20
-#     model_version: 2021-01-08
-#     precision_at_30: 1.811184061580258e-05
-#     precision_at_50: 1.2074560410535055e-05
-#     recall_at_30: 0.708148148148148
-#     recall_at_50: 0.5664814814814815
-# 
-# Criteria for promotion is `current_recall_at_30 >= prev_recall_at_30`
-# 
     parameters:
       CPU_REQUEST: 300m
       CPU_LIMIT: 1000m
@@ -30,25 +12,21 @@ services:
       REPLICAS: 1
       DOCKER_REGISTRY: quay.io
       DOCKER_IMAGE: openshiftio/rhel-fabric8-analytics-f8a-pypi-insights
-      MODEL_VERSION: "2021-01-04"
+      MODEL_VERSION: '2021-02-20'
+    comments:
+      deployment: staging
+      model_version: '2021-02-20'
+      minimum_length_of_manifest: 50
+      maximum_length_of_manifest: 200
+      latent_factor: 180
+      precision_at_30: 0.53123456
+      recall_at_30: 0.63234567
+      f1_score_at_30: 0.5773970115844186
+      precision_at_50: 0.70123456
+      recall_at_50: 0.80123456
+      f1_score_at_50: 0.7479067045829116
+      promotion_criteria: current_recall_at_30 >= deployed_recall_at_30
   - name: production
-# ** THIS COMMENT BLOCK IS GENERATED AND REPLACED BY AN AUTOMATED SCRIPT; DO NOT UPDATE IT MANUALLY **
-# 
-# - Hyper parameters :: 
-#     deployment: production
-#     f1_score_at_30: 4.6222653164811095e-05
-#     f1_score_at_50: 3.414870216677577e-05
-#     latent_factor: 40
-#     maximum_length_of_manifest: 500
-#     minimum_length_of_manifest: 20
-#     model_version: 2021-01-08
-#     precision_at_30: 1.811184061580258e-05
-#     precision_at_50: 1.2074560410535055e-05
-#     recall_at_30: 0.708148148148148
-#     recall_at_50: 0.5664814814814815
-# 
-# Criteria for promotion is `current_recall_at_30 >= prev_recall_at_30`
-# 
     parameters:
       CPU_REQUEST: 300m
       CPU_LIMIT: 1000m
@@ -57,6 +35,6 @@ services:
       REPLICAS: 1
       DOCKER_REGISTRY: quay.io
       DOCKER_IMAGE: openshiftio/rhel-fabric8-analytics-f8a-pypi-insights
-      MODEL_VERSION: "2021-01-08"
+      MODEL_VERSION: '2021-01-08'
   path: /openshift/template.yaml
   url: https://github.com/fabric8-analytics/f8a-pypi-insights/
