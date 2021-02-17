@@ -35,10 +35,10 @@ services:
       REPLICAS: 1
       DOCKER_REGISTRY: quay.io
       DOCKER_IMAGE: openshiftio/rhel-fabric8-analytics-f8a-pypi-insights
-      MODEL_VERSION: '2021-02-25'
+      MODEL_VERSION: '2021-02-28'
     comments:
       deployment: production
-      model_version: '2021-02-25'
+      model_version: '2021-02-28'
       minimum_length_of_manifest: 50
       maximum_length_of_manifest: 200
       latent_factor: 180
