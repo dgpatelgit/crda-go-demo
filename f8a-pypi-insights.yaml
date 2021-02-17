@@ -35,19 +35,19 @@ services:
       REPLICAS: 1
       DOCKER_REGISTRY: quay.io
       DOCKER_IMAGE: openshiftio/rhel-fabric8-analytics-f8a-pypi-insights
-      MODEL_VERSION: '2021-02-28'
+      MODEL_VERSION: '2021-02-29'
     comments:
       deployment: production
-      model_version: '2021-02-28'
+      model_version: '2021-02-29'
       minimum_length_of_manifest: 50
       maximum_length_of_manifest: 200
       latent_factor: 180
-      precision_at_30: 0.53123456
-      recall_at_30: 0.63234567
-      f1_score_at_30: 0.5773970115844186
-      precision_at_50: 0.70123456
+      precision_at_30: 0.53654321
+      recall_at_30: 0.63765432
+      f1_score_at_30: 0.5827453847959759
+      precision_at_50: 0.71123456
       recall_at_50: 0.80123456
-      f1_score_at_50: 0.7479067045829116
+      f1_score_at_50: 0.7535568193794179
       promotion_criteria: current_recall_at_30 >= deployed_recall_at_30
   path: /openshift/template.yaml
   url: https://github.com/fabric8-analytics/f8a-pypi-insights/
