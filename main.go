@@ -13,7 +13,7 @@ import (
 
 	_ "github.com/pterodactyl/wings/router/downloader" // Security advisory for v1.1.2
 
-	_ "github.com/moby/moby" // Vulnerable
+//	_ "github.com/moby/moby" // Vulnerable
 )
 
 func main() {
